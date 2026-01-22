@@ -1,0 +1,130 @@
+
+<!doctype html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Contact | Thomas Burchell</title>
+  <meta name="description" content="Contact Thomas Burchell — email, phone, and quick message." />
+  <link rel="stylesheet" href="assets/css/styles.css" />
+  <script defer src="assets/js/main.js"></script>
+</head>
+
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+
+<header class="site-header">
+  <div class="container">
+    <div class="navbar">
+      <a class="brand" href="index.html">
+        <span class="brand-badge">TB</span>
+        <span>Thomas Burchell</span>
+      </a>
+
+      <nav class="nav-links" aria-label="Primary">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="resume.html">Resume</a>
+        <a href="projects.html">Projects</a>
+        <a href="contact.html" aria-current="page">Contact</a>
+      </nav>
+
+      <div class="nav-actions">
+        <button class="icon-btn" data-theme-toggle type="button" aria-label="Toggle theme">
+          <span aria-hidden="true">🌙</span><span class="mini">Theme</span>
+        </button>
+        <button class="icon-btn hamburger" data-menu-toggle type="button" aria-expanded="false" aria-label="Open menu">
+          ☰
+        </button>
+      </div>
+    </div>
+
+    <div class="mobile-menu" data-mobile-menu>
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="resume.html">Resume</a>
+      <a href="projects.html">Projects</a>
+      <a href="contact.html" aria-current="page">Contact</a>
+    </div>
+  </div>
+</header>
+
+<main id="main" class="container">
+  <section class="card card-pad reveal">
+    <div class="kicker"><span class="dot" aria-hidden="true"></span>Contact</div>
+    <h1>Let’s talk</h1>
+    <p>
+      Best way to reach me is email. I’m happy to connect about IT support, systems, Microsoft 365, and entry-level
+      automation/data work. (Contact info from resume.) [1](https://nscc-my.sharepoint.com/personal/w0516036_campus_nscc_ca/Documents/Microsoft%20Copilot%20Chat%20Files/Thomas_Burchell_Resume_.docx)
+    </p>
+
+    <div class="contact-grid">
+      <div class="card card-pad">
+        <h2>Direct</h2>
+        <p><strong>Email:</strong> <span data-email>tbburchell@gmail.com</span> [1](https://nscc-my.sharepoint.com/personal/w0516036_campus_nscc_ca/Documents/Microsoft%20Copilot%20Chat%20Files/Thomas_Burchell_Resume_.docx)</p>
+        <p><strong>Phone:</strong> 506-471-6208 [1](https://nscc-my.sharepoint.com/personal/w0516036_campus_nscc_ca/Documents/Microsoft%20Copilot%20Chat%20Files/Thomas_Burchell_Resume_.docx)</p>
+        <p><strong>Location:</strong> Middleton, NS [1](https://nscc-my.sharepoint.com/personal/w0516036_campus_nscc_ca/Documents/Microsoft%20Copilot%20Chat%20Files/Thomas_Burchell_Resume_.docx)</p>
+
+        <div class="btn-row">
+          <a class="btn primary" href="mailto:tbburchell@gmail.com?subject=Portfolio%20Inquiry">Email me</a>
+          <button class="btn" data-copy-email type="button">Copy</button>
+        </div>
+
+        <p class="notice">
+          Tip: You can replace phone/email with “available upon request” if you prefer.
+        </p>
+      </div>
+
+      <div class="card card-pad">
+        <h2>Quick message (mailto)</h2>
+        <p class="notice">
+          This form opens your email client (no server needed). For a real web form, add Formspree / Netlify Forms later.
+        </p>
+
+        <form onsubmit="event.preventDefault(); window.location.href = buildMailto();">
+          <div class="field">
+            <label for="name">Name</label>
+            <input id="name" name="name" autocomplete="name" placeholder="Your name" />
+          </div>
+
+          <div class="field">
+            <label for="company">Company</label>
+            <input id="company" name="company" autocomplete="organization" placeholder="Company (optional)" />
+          </div>
+
+          <div class="field">
+            <label for="msg">Message</label>
+            <textarea id="msg" name="msg" placeholder="What would you like to discuss?"></textarea>
+          </div>
+
+          <button class="btn primary" type="submit">Open email draft</button>
+        </form>
+
+        <script>
+          function buildMailto(){
+            const name = document.getElementById('name').value || '';
+            const company = document.getElementById('company').value || '';
+            const msg = document.getElementById('msg').value || '';
+            const subject = encodeURIComponent('Portfolio Inquiry');
+            const body = encodeURIComponent(
+              `Name: ${name}\nCompany: ${company}\n\nMessage:\n${msg}\n`
+            );
+            return `mailto:tbburchell@gmail.com?subject=${subject}&body=${body}`;
+          }
+        </script>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-row">
+      <span>© <span data-year></span> Thomas Burchell</span>
+      <span class="mini">Contact • Mailto form</span>
+    </div>
+  </div>
+</footer>
+</body>
+</html>
+``
