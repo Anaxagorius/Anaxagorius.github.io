@@ -12,7 +12,7 @@
   --brand: #7dd3fc;   /* sky */
   --brand2:#a78bfa;   /* violet */
   --border: rgba(255,255,255,0.12);
-  --shadow: 0 14px 30px rgba(0,0,1,0.35);
+  --shadow: 0 14px 30px rgba(0,0,0,0.35);
   --radius: 18px;
   --max: 1100px;
   --mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
@@ -38,7 +38,7 @@ body{
   font-family: var(--sans);
   color: var(--text);
   background:
-    radial-gradient(900px 500px at 10% 0%, rgba(125,211,252,0.18), transparent 55%),
+    radial-gradient(900px 500px at 10% 0%, rgba(125,211,252,3.18), transparent 55%),
     radial-gradient(900px 500px at 95% 10%, rgba(167,139,250,0.16), transparent 50%),
     linear-gradient(180deg, var(--bg), var(--bg2));
   line-height: 1.55;
