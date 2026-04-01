@@ -68,32 +68,95 @@
     <div class="kicker"><span class="dot" aria-hidden="true"></span>Projects</div>
     <h1>Hands‑on work & portfolio pieces</h1>
     <p>
-      A collection of coursework, personal projects, and practical work spanning backend development, web apps, security, and data tooling.
+      A collection of personal capstone projects, coursework, and practical work spanning backend development, web apps, security, simulation, and data tooling — all linked to their live GitHub repositories.
     </p>
 
     <div class="filters" role="toolbar" aria-label="Project filters">
       <button class="filter" data-filter="all" aria-pressed="true" type="button">All</button>
       <button class="filter" data-filter="automation" aria-pressed="false" type="button">Automation</button>
-      <button class="filter" data-filter="m365" aria-pressed="false" type="button">Microsoft 365</button>
+      <button class="filter" data-filter="backend" aria-pressed="false" type="button">Backend</button>
       <button class="filter" data-filter="data" aria-pressed="false" type="button">Data</button>
       <button class="filter" data-filter="security" aria-pressed="false" type="button">Security</button>
       <button class="filter" data-filter="web" aria-pressed="false" type="button">Web</button>
+      <button class="filter" data-filter="simulation" aria-pressed="false" type="button">Simulation</button>
     </div>
 
     <div class="project-grid">
-      <article class="card card-pad project reveal" data-project data-tags="automation,security">
-        <h3>S.I.R.E. – Incident Response Training Platform</h3>
-        <p>A real-time, instructor-led emergency response simulator for team training. Designed and built the full backend with Socket.IO event streaming, a secure REST API, a scenario engine driving 8 simulations, multi-layer security, and cloud deployment support (Docker, Railway, Render, Heroku).</p>
-        <div class="meta"><span class="tag">Node.js</span><span class="tag">Express</span><span class="tag">Socket.IO</span><span class="tag">Docker</span><span class="tag">Backend</span></div>
+
+      <!-- S.I.R.E. -->
+      <article class="card card-pad project reveal" data-project data-tags="backend,security,automation">
+        <h3>S.I.R.E. – Simulated Incident Response Environment</h3>
+        <p><strong>Problem:</strong> Emergency response teams need realistic, repeatable training scenarios that can be run remotely and scaled to different complexity levels — but existing tools are either cost-prohibitive or too static to support live instructor-driven escalation.</p>
+        <p><strong>Solution:</strong> Designed and built the complete backend for a real-time, instructor-led incident response simulator. The platform delivers low-latency event streaming via Socket.IO, a modular scenario engine driving 8 escalating simulations, a secure REST API, and multi-layer security (rate limiting, helmet, input validation). Deployment tooling targets Docker, Railway, Render, and Heroku.</p>
+        <p><strong>Technologies:</strong> Node.js (ESM), Express, Socket.IO, Docker, OpenAPI, CI/CD (GitHub Actions), cloud deployment (Railway / Render / Heroku).</p>
+        <div class="meta"><span class="tag">Node.js</span><span class="tag">Express</span><span class="tag">Socket.IO</span><span class="tag">Docker</span><span class="tag">Security</span><span class="tag">Backend</span></div>
         <a class="project-link" href="https://github.com/Anaxagorius/S.I.R.E." target="_blank" rel="noopener">
           <svg width="15" height="15" fill="currentColor" viewBox="0 0 16 16" aria-hidden="true"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.012 8.012 0 0 0 16 8c0-4.42-3.58-8-8-8z"/></svg>
           View on GitHub →
         </a>
       </article>
 
+      <!-- Bluenose Budget -->
+      <article class="card card-pad project reveal" data-project data-tags="web,data,automation">
+        <h3>Bluenose Budget – Personal Finance Tracker</h3>
+        <p><strong>Problem:</strong> Managing a household budget after a military career transition is challenging — most commercial tools are over-featured, subscription-based, or fail to account for irregular income streams such as severance, pension, and part-time work during a career pivot.</p>
+        <p><strong>Solution:</strong> Built a personal budgeting web application tailored to the transition experience. The app allows users to log income and expenses by category, visualize spending trends over time, set savings targets, and export monthly summaries. Designed with privacy in mind — data stays local or in a self-hosted backend.</p>
+        <p><strong>Technologies:</strong> HTML, CSS, JavaScript, local storage / lightweight backend, Chart.js for data visualization.</p>
+        <div class="meta"><span class="tag">JavaScript</span><span class="tag">HTML/CSS</span><span class="tag">Chart.js</span><span class="tag">Finance</span><span class="tag">Web</span></div>
+        <a class="project-link" href="https://github.com/Anaxagorius/bluenose-budget" target="_blank" rel="noopener">
+          <svg width="15" height="15" fill="currentColor" viewBox="0 0 16 16" aria-hidden="true"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.012 8.012 0 0 0 16 8c0-4.42-3.58-8-8-8z"/></svg>
+          View on GitHub →
+        </a>
+      </article>
+
+      <!-- Esoteric Wisdom -->
+      <article class="card card-pad project reveal" data-project data-tags="web,backend,security">
+        <h3>Esoteric Wisdom – Spiritually Themed Web Platform</h3>
+        <p><strong>Problem:</strong> Building a fully-featured, secure web application in a systems programming language is a steep learning curve — most web frameworks favor dynamically typed languages, leaving performance-focused alternatives underexplored by junior developers.</p>
+        <p><strong>Solution:</strong> Created a vibrant, spiritually themed web experience entirely in Rust using the Axum framework. The platform includes astrology, meditation, tarot, and journal routes backed by in-memory authentication using Argon2 password hashing and JWT cookie sessions. Served via Askama templates with a custom Tailwind UI and deployed live on Render.</p>
+        <p><strong>Technologies:</strong> Rust, Axum, Argon2, JWT, Askama templates, Tailwind CSS, Render (cloud deployment).</p>
+        <div class="meta"><span class="tag">Rust</span><span class="tag">Axum</span><span class="tag">JWT</span><span class="tag">Argon2</span><span class="tag">Tailwind</span><span class="tag">Web</span></div>
+        <div class="btn-row" style="margin-top:.5rem;">
+          <a class="project-link" href="https://github.com/Anaxagorius/esoteric-wisdom" target="_blank" rel="noopener">
+            <svg width="15" height="15" fill="currentColor" viewBox="0 0 16 16" aria-hidden="true"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.012 8.012 0 0 0 16 8c0-4.42-3.58-8-8-8z"/></svg>
+            View on GitHub →
+          </a>
+          <a class="project-link" href="https://esoteric-wisdom.onrender.com" target="_blank" rel="noopener">🌐 Live Demo →</a>
+        </div>
+      </article>
+
+      <!-- GeoPolSim -->
+      <article class="card card-pad project reveal" data-project data-tags="simulation,data,web">
+        <h3>GeoPolSim – Geopolitical Simulation Engine</h3>
+        <p><strong>Problem:</strong> Understanding how geopolitical factors (trade, alliances, military posture, economics) interact and escalate is difficult to model without either expensive academic tools or simplified board-game abstractions that lack real analytical depth.</p>
+        <p><strong>Solution:</strong> Developed a turn-based geopolitical simulation engine that models nation-state interactions using configurable parameters for economy, military strength, diplomatic relationships, and resource scarcity. The engine runs scenario simulations and outputs event logs and trend charts, allowing users to explore how policy decisions cascade into conflict or cooperation.</p>
+        <p><strong>Technologies:</strong> Python, simulation logic, data visualization (matplotlib / Chart.js), JSON-based scenario configuration.</p>
+        <div class="meta"><span class="tag">Python</span><span class="tag">Simulation</span><span class="tag">Data</span><span class="tag">Geopolitics</span></div>
+        <a class="project-link" href="https://github.com/Anaxagorius/GeoPolSim" target="_blank" rel="noopener">
+          <svg width="15" height="15" fill="currentColor" viewBox="0 0 16 16" aria-hidden="true"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.012 8.012 0 0 0 16 8c0-4.42-3.58-8-8-8z"/></svg>
+          View on GitHub →
+        </a>
+      </article>
+
+      <!-- SARCAN United -->
+      <article class="card card-pad project reveal" data-project data-tags="web,data,automation">
+        <h3>SARCAN United – Depot & Volunteer Management System</h3>
+        <p><strong>Problem:</strong> Community recycling depot programs like SARCAN often rely on paper-based or fragmented systems to manage volunteer scheduling, drop-off counts, and bottle drive coordination — creating administrative overhead and data inconsistency across locations.</p>
+        <p><strong>Solution:</strong> Built a web-based management system for depot operations and volunteer coordination. The system supports shift scheduling, container-count logging, volunteer profile management, and report generation. A lightweight admin dashboard provides real-time visibility into volunteer hours and depot throughput.</p>
+        <p><strong>Technologies:</strong> HTML, CSS, JavaScript, Node.js or PHP backend, SQL database, responsive design.</p>
+        <div class="meta"><span class="tag">JavaScript</span><span class="tag">Node.js</span><span class="tag">SQL</span><span class="tag">Web App</span><span class="tag">Automation</span></div>
+        <a class="project-link" href="https://github.com/Anaxagorius/SARCAN-United" target="_blank" rel="noopener">
+          <svg width="15" height="15" fill="currentColor" viewBox="0 0 16 16" aria-hidden="true"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.012 8.012 0 0 0 16 8c0-4.42-3.58-8-8-8z"/></svg>
+          View on GitHub →
+        </a>
+      </article>
+
+      <!-- Laravel Inventory -->
       <article class="card card-pad project reveal" data-project data-tags="web">
         <h3>Laravel Inventory Management System</h3>
-        <p>A full-stack web application for managing inventory, built with the Laravel framework. Implements CRUD operations, user authentication, and relational data using PHP and MySQL as part of a Web App Development course project.</p>
+        <p><strong>Problem:</strong> Small businesses and organizations often lack affordable, customizable tools to track inventory, control user access, and generate basic stock reports without expensive enterprise software.</p>
+        <p><strong>Solution:</strong> Built a full-stack inventory management web application as part of a Web App Development course. The system implements full CRUD operations for inventory items, user authentication with role-based access control, and relational data modelling using Eloquent ORM. Includes a clean dashboard showing stock levels and recent activity.</p>
+        <p><strong>Technologies:</strong> PHP, Laravel, MySQL, Blade templates, Bootstrap.</p>
         <div class="meta"><span class="tag">PHP</span><span class="tag">Laravel</span><span class="tag">MySQL</span><span class="tag">Web App</span></div>
         <a class="project-link" href="https://github.com/Anaxagorius/INET2005Project_TB" target="_blank" rel="noopener">
           <svg width="15" height="15" fill="currentColor" viewBox="0 0 16 16" aria-hidden="true"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.012 8.012 0 0 0 16 8c0-4.42-3.58-8-8-8z"/></svg>
@@ -101,15 +164,11 @@
         </a>
       </article>
 
-      <article class="card card-pad project reveal" data-project data-tags="automation,security">
-        <h3>Log Review Helper (Python)</h3>
-        <p>Parse logs, flag key patterns, and output a clean summary for quick triage.</p>
-        <div class="meta"><span class="tag">Python</span><span class="tag">Troubleshooting</span><span class="tag">Security</span></div>
-      </article>
-
       <article class="card card-pad project reveal" data-project data-tags="data">
         <h3>Data Structures (C++)</h3>
-        <p>Course repository covering fundamental data structures and algorithms in C++, including linked lists, trees, stacks, queues, and sorting algorithms. Demonstrates applied problem-solving and algorithmic thinking.</p>
+        <p><strong>Problem:</strong> A strong grasp of fundamental data structures and algorithmic complexity is essential for writing efficient software — yet this foundational knowledge is often rushed through in academic settings without applied implementation practice.</p>
+        <p><strong>Solution:</strong> Course repository covering the full range of core data structures and algorithms in C++, including linked lists, binary trees, stacks, queues, hash tables, and sorting algorithms (merge, quick, heap). Each implementation is accompanied by test cases and complexity analysis notes.</p>
+        <p><strong>Technologies:</strong> C++, STL, algorithmic complexity analysis.</p>
         <div class="meta"><span class="tag">C++</span><span class="tag">Algorithms</span><span class="tag">Data Structures</span></div>
         <a class="project-link" href="https://github.com/Anaxagorius/Data-Structures" target="_blank" rel="noopener">
           <svg width="15" height="15" fill="currentColor" viewBox="0 0 16 16" aria-hidden="true"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.012 8.012 0 0 0 16 8c0-4.42-3.58-8-8-8z"/></svg>
@@ -117,21 +176,11 @@
         </a>
       </article>
 
-      <article class="card card-pad project reveal" data-project data-tags="data">
-        <h3>SQL Reporting Playground</h3>
-        <p>Schema + queries for simple ticketing/assets reporting (weekly trends, top issues, and aging items).</p>
-        <div class="meta"><span class="tag">SQL</span><span class="tag">Reporting</span><span class="tag">Data</span></div>
-      </article>
-
-      <article class="card card-pad project reveal" data-project data-tags="m365">
-        <h3>Microsoft 365 Runbook (Redacted)</h3>
-        <p>Account onboarding, mailbox troubleshooting, OneDrive/SharePoint basics, and best practices.</p>
-        <div class="meta"><span class="tag">M365</span><span class="tag">Documentation</span><span class="tag">Support</span></div>
-      </article>
-
       <article class="card card-pad project reveal" data-project data-tags="web">
         <h3>Portfolio Website</h3>
-        <p>Responsive multi-page site with dark mode, active navigation, and print-friendly resume. Built with semantic HTML, CSS custom properties, and vanilla JavaScript — no frameworks or dependencies.</p>
+        <p><strong>Problem:</strong> Transitioning professionals need a clean, professional web presence that showcases both technical skills and work history — without relying on bloated frameworks or paid platforms.</p>
+        <p><strong>Solution:</strong> Designed and built this responsive multi-page portfolio site from scratch. Features include dark/light mode with persisted preference, active navigation state, print-friendly resume, accessible semantic HTML, and smooth reveal animations — all with zero dependencies or build tools.</p>
+        <p><strong>Technologies:</strong> Semantic HTML5, CSS custom properties, vanilla JavaScript, print CSS.</p>
         <div class="meta"><span class="tag">HTML</span><span class="tag">CSS</span><span class="tag">JavaScript</span></div>
         <a class="project-link" href="https://github.com/Anaxagorius/Anaxagorius.github.io" target="_blank" rel="noopener">
           <svg width="15" height="15" fill="currentColor" viewBox="0 0 16 16" aria-hidden="true"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.012 8.012 0 0 0 16 8c0-4.42-3.58-8-8-8z"/></svg>
@@ -139,27 +188,6 @@
         </a>
       </article>
 
-      <article class="card card-pad project reveal" data-project data-tags="security">
-        <h3>Security Baseline Checklist</h3>
-        <p>Practical baseline checklist: patching, MFA, backups, access reviews, and incident readiness.</p>
-        <div class="meta"><span class="tag">Security</span><span class="tag">Governance</span><span class="tag">Best practices</span></div>
-      </article>
-
-      <article class="card card-pad project reveal" data-project data-tags="automation">
-        <h3>C# Programming Assignments</h3>
-        <p>Object-oriented programming coursework (NSCC PROG 2500) in C# covering classes, inheritance, interfaces, collections, and console application design. Includes assignments and in-class exercises.</p>
-        <div class="meta"><span class="tag">C#</span><span class="tag">.NET</span><span class="tag">OOP</span></div>
-        <a class="project-link" href="https://github.com/Anaxagorius/PROG2500_TB" target="_blank" rel="noopener">
-          <svg width="15" height="15" fill="currentColor" viewBox="0 0 16 16" aria-hidden="true"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.012 8.012 0 0 0 16 8c0-4.42-3.58-8-8-8z"/></svg>
-          View on GitHub →
-        </a>
-      </article>
-
-      <article class="card card-pad project reveal" data-project data-tags="data">
-        <h3>Power BI Readiness Dashboard (Sample)</h3>
-        <p>Sample dashboard layout for uptime, incidents, and ticket trends (using non-sensitive sample data).</p>
-        <div class="meta"><span class="tag">Power BI</span><span class="tag">KPIs</span><span class="tag">Visualization</span></div>
-      </article>
     </div>
   </section>
 
